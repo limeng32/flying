@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="my bat is flying in first-snow">
 <meta property="og:description" content="本节内容向您讲解 flying 的路线图。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-11T07:06:33.793Z">
+<meta property="og:updated_time" content="2018-01-21T13:57:21.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flying 的发展方向">
 <meta name="twitter:description" content="本节内容向您讲解 flying 的路线图。">
@@ -92,17 +92,22 @@
 		
 		</div>
 		
-		<p>目前 flying 最新版本为 <code>0.7.4 、 0.8.2 、 0.9.2</code>，此版本新增特性：</p>
+		<p>目前 flying 最新版本为 <code>初雪</code>，对应版本号为 <code>0.8.3 、 0.9.3</code>，此版本新增特性：</p>
 <ul>
-<li>兼容 JPA 中的 <code>@Column</code>、<code>@Id</code>、<code>@Table</code> 标签，这些标签可以和 <code>@FieldMapperAnnotation</code>、<code>@TableMapperAnnotation</code> 一起使用，优先级从高到低为：<code>@Id</code>、<code>@FieldMapperAnnotation</code> 和 <code>@TableMapperAnnotation</code>、<code>@Column</code> 和 <code>@Table</code>。</li>
-<li>现在 <code>ignoreTag</code> 对 insert、update、updatePersistent 也会起作用。如果 <code>@Column</code> 中设置 <code>insertable = false</code> 和 <code>updateable = false</code>，会在新增和修改时起到永久性忽略的作用。</li>
+<li>自定义主键生成器，包括内置和完全自定义两种形式。</li>
+<li>或逻辑查询，可以用在普通查询、跨表查询和跨库查询中。</li>
 </ul>
-<p>下一版本预计新增自定义主键生成机制功能，同时数据库查询中的 “或” 逻辑也会实现，敬请期待。</p>
+<p>下一版本的关键词是“速度”，敬请期待。</p>
 <p>flying 的代码在 github 和 gitee 上进行开源，前者访问地址为 <a href="https://github.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://github.com/limeng32/mybatis.flying</a>，后者访问地址为 <a href="https://gitee.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://gitee.com/limeng32/mybatis.flying</a> 。您可以通过 Issues 与我们联系，提出您的需要，或是加入我们成为贡献者，提交您的代码，我们非常欢迎您这样做。我们的交流 QQ 群是：529363138 。</p>
 <h3 id="历史更新记录"><a href="#历史更新记录" class="headerlink" title="历史更新记录"></a><a href="#历史更新记录">历史更新记录</a></h3><p><code>0.7.3 、 0.8.1 、 0.9.1</code> 版本新增特性：</p>
 <ul>
 <li>对跨数据源调用的支持，为此在 <code>@FieldMapperAnnotation</code> 中新增了 <code>dbAssociationTypeHandler</code> 属性。</li>
 <li>强化了对 mybatis 自带二级缓存的改造，现在二级缓存可运行于多数据源环境，更加稳定，并可配合 redis 一起使用。</li>
+</ul>
+<p><code>0.7.4 、 0.8.2 、 0.9.2</code> 版本新增特性：</p>
+<ul>
+<li>兼容 JPA 中的 <code>@Column</code>、<code>@Id</code>、<code>@Table</code> 标签，这些标签可以和 <code>@FieldMapperAnnotation</code>、<code>@TableMapperAnnotation</code> 一起使用，优先级从高到低为：<code>@Id</code>、<code>@FieldMapperAnnotation</code> 和 <code>@TableMapperAnnotation</code>、<code>@Column</code> 和 <code>@Table</code>。</li>
+<li>现在 <code>ignoreTag</code> 对 insert、update、updatePersistent 也会起作用。如果 <code>@Column</code> 中设置 <code>insertable = false</code> 和 <code>updateable = false</code>，会在新增和修改时起到永久性忽略的作用。<br>（因使用率原因，适用于 mybatis-3.2.x 的 flying <code>0.7.x</code> 分支不再更新）</li>
 </ul>
   
 	</div>
