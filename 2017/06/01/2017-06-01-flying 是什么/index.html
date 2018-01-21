@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="my bat is flying in first-snow">
 <meta property="og:description" content="Mybatis 是一个简约而强大的 orm 解决方案，而 flying 是它的扩展插件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-21T08:00:22.305Z">
+<meta property="og:updated_time" content="2018-01-21T14:12:33.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flying 是什么">
 <meta name="twitter:description" content="Mybatis 是一个简约而强大的 orm 解决方案，而 flying 是它的扩展插件。">
@@ -113,8 +113,8 @@
 </tr>
 </tbody>
 </table>
-<p>（flying 从 <code>初雪</code> 起不再支持 mybatis-3.3.0 之前的版本）</p>
-<p>考虑到您可能是以前版本 flying 的使用者，我们会在文档中用 <code>最新版本新增</code> 将最新版本新增特性标识出来，在目录中也会加以提示。</p>
+<p>（出于使用率原因，flying 从 <code>初雪</code> 起不再支持 mybatis-3.2.x 的版本）</p>
+<p>考虑到您可能是以前版本 flying 的使用者，我们会在目录中将最新版本新增特性标识出来。</p>
 <p>如果您使用的是基于某一版本 mybatis 的定制版，您可以在依赖配置中加入 <code>exclusions</code>，以 mybatis-3.3.x 的定制版为例，您的依赖配置就像下面这样：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.limeng32<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis.flying<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.8.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>在您做好以上配置之后，flying 会自动下载到您的电脑本地。</p>
 <h2 id="如何使用-flying"><a href="#如何使用-flying" class="headerlink" title="如何使用 flying"></a><a href="#如何使用-flying">如何使用 flying</a></h2><p>使用本插件前您需要具备 Java 开发数据库应用的知识和使用 Mybatis 基本功能的经验。<br>在 Mybatis 中，有一个核心的配置文件，称做 Configuration.xml，我们的插件需要先在这里配置，才能在运行期被识别出来。</p>
@@ -203,12 +203,6 @@
           <li>
             
             	<a href="http://www.cnblogs.com/dasn/articles/5208022.html" target="_blank" title="为什么我们在初雪版中引入自定义主键机制">flying-初雪 新增自定义主键生成器特性</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://myactiviti.limeng32.com" target="_blank" title="一个更符合中国人使用习惯的工作流引擎">正在酝酿中的另一个开源项目 - myActiviti</a>
             
           </li>
         
