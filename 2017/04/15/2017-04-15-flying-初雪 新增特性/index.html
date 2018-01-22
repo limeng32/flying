@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="my bat is flying in first-snow">
 <meta property="og:description" content="本节内容向您讲解初雪版本新增的自定义主键生成器和“或”查询特性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-21T14:09:44.956Z">
+<meta property="og:updated_time" content="2018-01-22T02:45:15.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flying-初雪 新增内容">
 <meta name="twitter:description" content="本节内容向您讲解初雪版本新增的自定义主键生成器和“或”查询特性">
@@ -40,7 +40,7 @@
 				<h1 class="site-name"><a href="/" title="my bat is flying in first-snow">my bat is flying in first-snow</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -56,7 +56,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:flying-doc.limeng32.com">
 					</form>
 					
@@ -79,16 +79,16 @@
 		<a href="/about" title="limeng32" target="_blank" itemprop="author">limeng32</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> Published 2017-04-15</time>
+    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> 发表于 2017-04-15</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol>
 		
 		</div>
 		
@@ -114,6 +114,7 @@
 <p>关于跨库的实现方案您可以参见<a href="http://flying-doc.limeng32.com/2017/05/01/2017-05-01-%E4%BD%BF%E7%94%A8flying%E8%A7%A3%E5%86%B3pojo%E8%87%AA%E5%8A%A8%E6%98%A0%E5%B0%84%E9%97%AE%E9%A2%98/#%E8%B7%A8%E6%95%B0%E6%8D%AE%E6%BA%90">使用 flying 跨数据源查询</a>一节，<code>@ConditionMapperAnnotation</code> 中的 <code>dbAssociationTypeHandler</code> 属性和 <code>@FieldMapperAnnotation</code> 中的 <code>dbAssociationTypeHandler</code> 用法完全相同。</p>
 <p>如果想查询对应role 的 ID 为 1 或者为 2 的 person 的话只需如下代码即可：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Role r1 = <span class="keyword">new</span> Role();</span><br><span class="line">r1.setId(<span class="number">1</span>);</span><br><span class="line">Role r2 = <span class="keyword">new</span> Role();</span><br><span class="line">r2.setId(<span class="number">2</span>);</span><br><span class="line">PersonCondition pc = <span class="keyword">new</span> PersonCondition();</span><br><span class="line">pc.setRole1EqualsOrRole2Equals(r1,r2);</span><br><span class="line">Person&lt;Collection&gt; persons = personService.selectAll(pc);</span><br></pre></td></tr></table></figure>
+<h2 id="优化使用体验"><a href="#优化使用体验" class="headerlink" title="优化使用体验"></a><a href="#优化使用体验">优化使用体验</a></h2><p><code>@QueryMapperAnnotation</code> 现在可以省略，只要您的某个类既继承实体 pojo 又实现 Conditionable 接口 flying 就可以判断出它是相关 pojo 的条件类。当然这个标签出现在代码里也没有任何问题。</p>
 <h2 id="全面提升代码质量"><a href="#全面提升代码质量" class="headerlink" title="全面提升代码质量"></a><a href="#全面提升代码质量">全面提升代码质量</a></h2><p>在 <code>初雪</code> 中，我们把代码质量作为提升的重要一环，同时使用 阿里 P3C 和 SonarQube 来修正代码缺陷，当您阅读 flying 源码时您会深切感受到这一点。</p>
   
 	</div>
@@ -169,21 +170,21 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -422,7 +423,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
