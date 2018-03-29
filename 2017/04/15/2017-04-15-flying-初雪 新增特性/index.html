@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>flying-初雪 新增内容 | my bat is flying in first-snow</title>
+    <title>flying-初雪 新增内容 | my bat is flying in sunny-spring</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="limeng32">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="flying-初雪 新增内容">
 <meta property="og:url" content="http://flying-doc.limeng32.com/2017/04/15/2017-04-15-flying-初雪 新增特性/index.html">
-<meta property="og:site_name" content="my bat is flying in first-snow">
+<meta property="og:site_name" content="my bat is flying in sunny-spring">
 <meta property="og:description" content="本节内容向您讲解初雪版本新增的自定义主键生成器和“或”查询特性">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-01-22T02:45:15.883Z">
@@ -24,7 +24,7 @@
 <meta name="twitter:description" content="本节内容向您讲解初雪版本新增的自定义主键生成器和“或”查询特性">
 
     
-    <link rel="alternative" href="/atom.xml" title="my bat is flying in first-snow" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="my bat is flying in sunny-spring" type="application/atom+xml">
     
     
     
@@ -37,10 +37,10 @@
 <div>
 		
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="my bat is flying in first-snow">my bat is flying in first-snow</a></h1>
+				<h1 class="site-name"><a href="/" title="my bat is flying in sunny-spring">my bat is flying in sunny-spring</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -56,7 +56,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:flying-doc.limeng32.com">
 					</form>
 					
@@ -79,14 +79,14 @@
 		<a href="/about" title="limeng32" target="_blank" itemprop="author">limeng32</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> 发表于 2017-04-15</time>
+    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> Published 2017-04-15</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">Contents</strong>
 		
 		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol>
 		
@@ -133,7 +133,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://flying-doc.limeng32.com/2017/04/15/2017-04-15-flying-初雪 新增特性/" data-title="flying-初雪 新增内容 | my bat is flying in first-snow" data-tsina="" class="share clearfix">
+	  <div data-url="http://flying-doc.limeng32.com/2017/04/15/2017-04-15-flying-初雪 新增特性/" data-title="flying-初雪 新增内容 | my bat is flying in sunny-spring" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -170,21 +170,21 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -423,7 +423,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
