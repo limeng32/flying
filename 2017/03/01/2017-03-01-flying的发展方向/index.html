@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="my bat is flying in sunny-spring">
 <meta property="og:description" content="本节内容向您讲解 flying 的路线图。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-21T13:57:21.101Z">
+<meta property="og:updated_time" content="2018-04-06T15:34:51.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flying 的发展方向">
 <meta name="twitter:description" content="本节内容向您讲解 flying 的路线图。">
@@ -92,10 +92,10 @@
 		
 		</div>
 		
-		<p>目前 flying 最新版本为 <code>初雪</code>，对应版本号为 <code>0.8.3 、 0.9.3</code>，此版本新增特性：</p>
+		<p>目前 flying 最新版本为 <code>阳春</code>，对应版本号为 <code>0.9.4</code>，此版本新增特性：</p>
 <ul>
-<li>自定义主键生成器，包括内置和完全自定义两种形式。</li>
-<li>或逻辑查询，可以用在普通查询、跨表查询和跨库查询中。</li>
+<li>flying 语句中加入指定查询数据库的功能，由此可以实现高效率跨数据库查询。</li>
+<li>@FieldMapperAnnotation 和 @ConditionMapperAnnotation 增加了 customTypeHandler 属性，其具有最高优先级，由此可以实现跨数据库“或逻辑”查询。</li>
 </ul>
 <p>下一版本的关键词是“速度”，敬请期待。</p>
 <p>flying 的代码在 github 和 gitee 上进行开源，前者访问地址为 <a href="https://github.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://github.com/limeng32/mybatis.flying</a>，后者访问地址为 <a href="https://gitee.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://gitee.com/limeng32/mybatis.flying</a> 。您可以通过 Issues 与我们联系，提出您的需要，或是加入我们成为贡献者，提交您的代码，我们非常欢迎您这样做。我们的交流 QQ 群是：529363138 。</p>
@@ -108,6 +108,11 @@
 <ul>
 <li>兼容 JPA 中的 <code>@Column</code>、<code>@Id</code>、<code>@Table</code> 标签，这些标签可以和 <code>@FieldMapperAnnotation</code>、<code>@TableMapperAnnotation</code> 一起使用，优先级从高到低为：<code>@Id</code>、<code>@FieldMapperAnnotation</code> 和 <code>@TableMapperAnnotation</code>、<code>@Column</code> 和 <code>@Table</code>。</li>
 <li>现在 <code>ignoreTag</code> 对 insert、update、updatePersistent 也会起作用。如果 <code>@Column</code> 中设置 <code>insertable = false</code> 和 <code>updateable = false</code>，会在新增和修改时起到永久性忽略的作用。<br>（因使用率原因，适用于 mybatis-3.2.x 的 flying <code>0.7.x</code> 分支不再更新）</li>
+</ul>
+<p><code>0.8.3 、 0.9.3</code> 版本新增特性：</p>
+<ul>
+<li>自定义主键生成器，包括内置和完全自定义两种形式。</li>
+<li>或逻辑查询，可以用在普通查询、跨表查询。</li>
 </ul>
   
 	</div>
