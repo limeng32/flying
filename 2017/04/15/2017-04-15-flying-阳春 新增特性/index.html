@@ -11,17 +11,17 @@
     
 
     
-    <meta name="description" content="本节内容向您讲解初雪版本新增的自定义主键生成器和“或”查询特性">
+    <meta name="description" content="本节内容向您讲解阳春版本新增的在 flying 表达式中指定查询数据库和 customTypeHandler 特性">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flying-阳春 新增内容">
 <meta property="og:url" content="http://flying-doc.limeng32.com/2017/04/15/2017-04-15-flying-阳春 新增特性/index.html">
 <meta property="og:site_name" content="my bat is flying in sunny-spring">
-<meta property="og:description" content="本节内容向您讲解初雪版本新增的自定义主键生成器和“或”查询特性">
+<meta property="og:description" content="本节内容向您讲解阳春版本新增的在 flying 表达式中指定查询数据库和 customTypeHandler 特性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-06T15:24:08.769Z">
+<meta property="og:updated_time" content="2018-04-09T08:28:10.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flying-阳春 新增内容">
-<meta name="twitter:description" content="本节内容向您讲解初雪版本新增的自定义主键生成器和“或”查询特性">
+<meta name="twitter:description" content="本节内容向您讲解阳春版本新增的在 flying 表达式中指定查询数据库和 customTypeHandler 特性">
 
     
     <link rel="alternative" href="/atom.xml" title="my bat is flying in sunny-spring" type="application/atom+xml">
@@ -40,7 +40,7 @@
 				<h1 class="site-name"><a href="/" title="my bat is flying in sunny-spring">my bat is flying in sunny-spring</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -56,7 +56,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:flying-doc.limeng32.com">
 					</form>
 					
@@ -79,14 +79,14 @@
 		<a href="/about" title="limeng32" target="_blank" itemprop="author">limeng32</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> Published 2017-04-15</time>
+    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> 發表於 2017-04-15</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目錄</strong>
 		
 		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#flying-阳春"><span class="toc-text"><a href="#flying-&#x9633;&#x6625;" class="headerlink" title="flying-&#x9633;&#x6625;"></a><a href="#flying-&#x9633;&#x6625;">flying-&#x9633;&#x6625;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高性能的跨数据库查询"><span class="toc-text"><a href="#&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;" class="headerlink" title="&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;"></a><a href="#&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;">&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#customTypeHandler"><span class="toc-text"><a href="#customTypeHandler" class="headerlink" title="customTypeHandler"></a><a href="#customTypeHandler">customTypeHandler</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#flying-初雪"><span class="toc-text"><a href="#flying-&#x521D;&#x96EA;" class="headerlink" title="flying-&#x521D;&#x96EA;"></a><a href="#flying-&#x521D;&#x96EA;">flying-&#x521D;&#x96EA;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol></li></ol>
 		
@@ -97,7 +97,7 @@
 <p>这个方法永远都会使用 <code>dataBaseName</code> 数据库，无论它在哪个数据源内被调用；如果需要跨源，它会使用 <code>smartDataSourceId</code> 数据源（请确保这是一个智能数据源）；</p>
 <p>同时从此版本开始，您需要将需要将<a href="https://github.com/limeng32/mybatis.flying/blob/master/src/main/java/indi/mybatis/flying/FlyingContextProvider.java" target="_blank" rel="noopener"> flying 的语境访问器</a> 引入您的 spring 环境配置中，具体方式有两种，一种是<a href="https://github.com/limeng32/mybatis.flying/blob/master/src/test/resources/spring-test.xml" target="_blank" rel="noopener">在环境 spring 配置文件中加入bean</a>，另一种是在 spring 配置文件的扫描器中加上 “indi.mybatis.flying” 路径，如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"indi.demo.flying.*, indi.mybatis.flying"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="customTypeHandler"><a href="#customTypeHandler" class="headerlink" title="customTypeHandler"></a><a href="#customTypeHandler">customTypeHandler</a></h2><p>在 <code>flying-阳春</code> 中 <code>@FieldMapperAnnotation</code> 和 <code>@ConditionMapperAnnotation</code> 增加了 <code>customTypeHandler</code> 属性，使您可以用自定义的 TypeHandler 来处理变量映射，因为  <code>customTypeHandler</code> 具有最高优先级。一个使用场景如下：</p>
-<h3 id="跨库或逻辑查询"><a href="#跨库或逻辑查询" class="headerlink" title="跨库或逻辑查询"></a><a href="#跨库或逻辑查询">跨库或逻辑查询</a></h3><p><code>customTypeHandler</code> 使跨库或查询成为可能，但仅限于外键 ID 相等这一种条件。我们假设 person 和 role 不在一个数据库中，如果想查询对应role 的 ID 为 1 或者为 2 的 person，我们可以在 person 的条件类中加入如下变量：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Or</span>(&#123; </span><br><span class="line">  <span class="meta">@ConditionMapperAnnotation</span>(dbFieldName = <span class="string">"role_id"</span>, conditionType = ConditionType.Equal, customTypeHandler = IntegerTypeHandler.class),</span><br><span class="line">  <span class="meta">@ConditionMapperAnnotation</span>(dbFieldName = <span class="string">"role_id"</span>, conditionType = ConditionType.Equal, customTypeHandler = IntegerTypeHandler.class) &#125;)</span><br><span class="line"><span class="keyword">private</span> Object[] role1EqualsOrRole2Equals;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> Object[] getRole1EqualsOrRole2Equals () &#123;</span><br><span class="line">	<span class="keyword">return</span> role1EqualsOrRole2Equals;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setRole1EqualsOrRole2Equals</span> <span class="params">(Object... role1EqualsOrRole2Equals)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>. role1EqualsOrRole2Equals = role1EqualsOrRole2Equals;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="跨库或逻辑查询"><a href="#跨库或逻辑查询" class="headerlink" title="跨库或逻辑查询"></a><a href="#跨库或逻辑查询">跨库或逻辑查询</a></h3><p><code>customTypeHandler</code> 使跨库或查询成为可能，但仅限于外键 ID 相等这一种条件。我们假设 person 和 role 不在一个数据库中，如果想查询对应role 的 ID 为 1 或者为 2 的 person，我们可以在 person 的条件类中加入如下变量：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.ibatis.type.IntegerTypeHandler;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Or</span>(&#123; </span><br><span class="line">  <span class="meta">@ConditionMapperAnnotation</span>(dbFieldName = <span class="string">"role_id"</span>, conditionType = ConditionType.Equal, customTypeHandler = IntegerTypeHandler.class),</span><br><span class="line">  <span class="meta">@ConditionMapperAnnotation</span>(dbFieldName = <span class="string">"role_id"</span>, conditionType = ConditionType.Equal, customTypeHandler = IntegerTypeHandler.class) &#125;)</span><br><span class="line"><span class="keyword">private</span> Object[] role1EqualsOrRole2Equals;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> Object[] getRole1EqualsOrRole2Equals () &#123;</span><br><span class="line">	<span class="keyword">return</span> role1EqualsOrRole2Equals;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setRole1EqualsOrRole2Equals</span> <span class="params">(Object... role1EqualsOrRole2Equals)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>. role1EqualsOrRole2Equals = role1EqualsOrRole2Equals;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>如果想查询对应role 的 ID 为 1 或者为 2 的 person 的话只需如下代码即可：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PersonCondition pc = <span class="keyword">new</span> PersonCondition();</span><br><span class="line">pc.setRole1EqualsOrRole2Equals(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">Person&lt;Collection&gt; persons = personService.selectAll(pc);</span><br></pre></td></tr></table></figure>
 <h1 id="flying-初雪"><a href="#flying-初雪" class="headerlink" title="flying-初雪"></a><a href="#flying-初雪">flying-初雪</a></h1><p><code>初雪</code> 对应 flying 版本号为 <code>0.8.3</code>（适用于 mybatis-3.3.x）和 <code>0.9.3</code>（适用于 mybatis-3.4.x），主要新增特性如下：</p>
@@ -174,21 +174,21 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目錄</strong>
  
  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#flying-阳春"><span class="toc-text"><a href="#flying-&#x9633;&#x6625;" class="headerlink" title="flying-&#x9633;&#x6625;"></a><a href="#flying-&#x9633;&#x6625;">flying-&#x9633;&#x6625;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高性能的跨数据库查询"><span class="toc-text"><a href="#&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;" class="headerlink" title="&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;"></a><a href="#&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;">&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x8DE8;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#customTypeHandler"><span class="toc-text"><a href="#customTypeHandler" class="headerlink" title="customTypeHandler"></a><a href="#customTypeHandler">customTypeHandler</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#跨库或逻辑查询"><span class="toc-text"><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x8DE8;&#x5E93;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#flying-初雪"><span class="toc-text"><a href="#flying-&#x521D;&#x96EA;" class="headerlink" title="flying-&#x521D;&#x96EA;"></a><a href="#flying-&#x521D;&#x96EA;">flying-&#x521D;&#x96EA;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -427,7 +427,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
