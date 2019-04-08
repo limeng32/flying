@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>flying 的发展方向 | my bat is flying in sunny-spring</title>
+    <title>flying 的发展方向 | my bat is flying in qing-ming</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="limeng32">
@@ -15,16 +15,16 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="flying 的发展方向">
 <meta property="og:url" content="http://flying-doc.limeng32.com/2017/03/01/2017-03-01-flying的发展方向/index.html">
-<meta property="og:site_name" content="my bat is flying in sunny-spring">
+<meta property="og:site_name" content="my bat is flying in qing-ming">
 <meta property="og:description" content="本节内容向您讲解 flying 的路线图。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-09T09:01:30.775Z">
+<meta property="og:updated_time" content="2019-04-08T09:55:47.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flying 的发展方向">
 <meta name="twitter:description" content="本节内容向您讲解 flying 的路线图。">
 
     
-    <link rel="alternative" href="/atom.xml" title="my bat is flying in sunny-spring" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="my bat is flying in qing-ming" type="application/atom+xml">
     
     
     
@@ -37,7 +37,7 @@
 <div>
 		
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="my bat is flying in sunny-spring">my bat is flying in sunny-spring</a></h1>
+				<h1 class="site-name"><a href="/" title="my bat is flying in qing-ming">my bat is flying in qing-ming</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
@@ -92,15 +92,18 @@
 		
 		</div>
 		
-		<p>目前 flying 最新版本为 <code>阳春</code>，对应版本号为 <code>0.9.4</code>，此版本新增特性：</p>
+		<p>目前 flying 最新版本为 <code>清明</code>，对应版本号为 <code>0.9.7</code>，此版本新增特性：</p>
 <ul>
-<li>flying 语句中加入指定查询数据库的功能，由此可以实现高效率跨数据库查询。</li>
+<li>支持复杂的外键约束和右联方式。</li>
+<li>修正在高并发情况下sql会混乱的bug。</li>
+</ul>
+<p>flying 的代码在 github 和 gitee 上进行开源，前者访问地址为 <a href="https://github.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://github.com/limeng32/mybatis.flying</a>，后者访问地址为 <a href="https://gitee.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://gitee.com/limeng32/mybatis.flying</a> 。您可以通过 Issues 与我们联系，提出您的需要，或是加入我们成为贡献者，提交您的代码，我们非常欢迎您这样做。我们的交流 QQ 群是：529363138 。</p>
+<h3 id="历史更新记录"><a href="#历史更新记录" class="headerlink" title="历史更新记录"></a><a href="#历史更新记录">历史更新记录</a></h3><p><code>0.9.4</code> 版本新增特性：</p>
+<ul>
+<li>flying 语句中加入指定查询数据库的功能，由此可以实现高效率跨数据库查询。（跨库特性是否应在orm层面实现仍在探索中，目前不建议使用）</li>
 <li>@FieldMapperAnnotation 和 @ConditionMapperAnnotation 增加了 customTypeHandler 属性，其具有最高优先级，由此可以实现跨数据库“或逻辑”查询。</li>
 </ul>
-<p>一个涵盖本文所有内容的代码示例也打包并放在<a href="http://www.demodashi.com/demo/12779.html" target="_blank" rel="noopener">代码大师网站</a>，只需要花一点点钱就可以得到，有道是送人玫瑰手留余香^^（秘密：这些代码也可以免费找到，但小小的付出可以换来更深的理解）</p>
-<p>下一版本的关键词是“速度”，敬请期待。</p>
-<p>flying 的代码在 github 和 gitee 上进行开源，前者访问地址为 <a href="https://github.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://github.com/limeng32/mybatis.flying</a>，后者访问地址为 <a href="https://gitee.com/limeng32/mybatis.flying" target="_blank" rel="noopener">https://gitee.com/limeng32/mybatis.flying</a> 。您可以通过 Issues 与我们联系，提出您的需要，或是加入我们成为贡献者，提交您的代码，我们非常欢迎您这样做。我们的交流 QQ 群是：529363138 。</p>
-<h3 id="历史更新记录"><a href="#历史更新记录" class="headerlink" title="历史更新记录"></a><a href="#历史更新记录">历史更新记录</a></h3><p><code>0.7.3 、 0.8.1 、 0.9.1</code> 版本新增特性：</p>
+<p><code>0.7.3 、 0.8.1 、 0.9.1</code> 版本新增特性：</p>
 <ul>
 <li>对跨数据源调用的支持，为此在 <code>@FieldMapperAnnotation</code> 中新增了 <code>dbAssociationTypeHandler</code> 属性（此属性在0.9.4中删除，采用更好的方式实现跨数据源）。</li>
 <li>强化了对 mybatis 自带二级缓存的改造，现在二级缓存可运行于多数据源环境，更加稳定，并可配合 redis 一起使用。</li>
@@ -132,7 +135,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://flying-doc.limeng32.com/2017/03/01/2017-03-01-flying的发展方向/" data-title="flying 的发展方向 | my bat is flying in sunny-spring" data-tsina="" class="share clearfix">
+	  <div data-url="http://flying-doc.limeng32.com/2017/03/01/2017-03-01-flying的发展方向/" data-title="flying 的发展方向 | my bat is flying in qing-ming" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -238,7 +241,7 @@
 
 	<p class="copyright">
 		written by <a href="/about" target="_blank" title="limeng32">limeng32</a>
-		© 2018
+		© 2019
 	</p>
 </div>
 </footer>
