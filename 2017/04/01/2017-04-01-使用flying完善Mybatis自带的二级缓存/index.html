@@ -40,7 +40,7 @@
 				<h1 class="site-name"><a href="/" title="my bat is flying in qing-ming">my bat is flying in qing-ming</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -79,14 +79,14 @@
 		<a href="/about" title="limeng32" target="_blank" itemprop="author">limeng32</a>
 		
   <p class="article-time">
-    <time datetime="2017-03-31T16:00:00.000Z" itemprop="datePublished"> 發表於 2017-04-01</time>
+    <time datetime="2017-03-31T16:00:00.000Z" itemprop="datePublished"> 发表于 2017-04-01</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#上手指南"><span class="toc-text"><a href="#&#x4E0A;&#x624B;&#x6307;&#x5357;" class="headerlink" title="&#x4E0A;&#x624B;&#x6307;&#x5357;"></a><a href="#&#x4E0A;&#x624B;&#x6307;&#x5357;">&#x4E0A;&#x624B;&#x6307;&#x5357;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#观察者-amp-触发者"><span class="toc-text"><a href="#&#x89C2;&#x5BDF;&#x8005;-amp-&#x89E6;&#x53D1;&#x8005;" class="headerlink" title="&#x89C2;&#x5BDF;&#x8005; &amp; &#x89E6;&#x53D1;&#x8005;"></a><a href="#&#x89C2;&#x5BDF;&#x8005;-amp-&#x89E6;&#x53D1;&#x8005;">&#x89C2;&#x5BDF;&#x8005; &amp; &#x89E6;&#x53D1;&#x8005;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨数据源缓存"><span class="toc-text"><a href="#&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;" class="headerlink" title="&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;"></a><a href="#&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;">&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-text"><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="headerlink" title="&#x6CE8;&#x610F;&#x4E8B;&#x9879;"></a><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#flying-如何判断缓存是否命中"><span class="toc-text"><a href="#flying-&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;" class="headerlink" title="flying &#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;"></a><a href="#flying-&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;">flying &#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flying-已回滚的操作是否会生成缓存"><span class="toc-text"><a href="#flying-&#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;" class="headerlink" title="flying &#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;"></a><a href="#flying-&#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;">flying &#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附录"><span class="toc-text"><a href="#&#x9644;&#x5F55;" class="headerlink" title="&#x9644;&#x5F55;"></a><a href="#&#x9644;&#x5F55;">&#x9644;&#x5F55;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码示例"><span class="toc-text"><a href="#&#x4EE3;&#x7801;&#x793A;&#x4F8B;" class="headerlink" title="&#x4EE3;&#x7801;&#x793A;&#x4F8B;"></a><a href="#&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#account-表建表语句"><span class="toc-text"><a href="#account-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;" class="headerlink" title="account &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;"></a><a href="#account-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;">account &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#role-表建表语句"><span class="toc-text"><a href="#role-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;" class="headerlink" title="role &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;"></a><a href="#role-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;">role &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;</a></span></a></li></ol></li></ol>
 		
@@ -178,21 +178,21 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">文章目录</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#上手指南"><span class="toc-text"><a href="#&#x4E0A;&#x624B;&#x6307;&#x5357;" class="headerlink" title="&#x4E0A;&#x624B;&#x6307;&#x5357;"></a><a href="#&#x4E0A;&#x624B;&#x6307;&#x5357;">&#x4E0A;&#x624B;&#x6307;&#x5357;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#观察者-amp-触发者"><span class="toc-text"><a href="#&#x89C2;&#x5BDF;&#x8005;-amp-&#x89E6;&#x53D1;&#x8005;" class="headerlink" title="&#x89C2;&#x5BDF;&#x8005; &amp; &#x89E6;&#x53D1;&#x8005;"></a><a href="#&#x89C2;&#x5BDF;&#x8005;-amp-&#x89E6;&#x53D1;&#x8005;">&#x89C2;&#x5BDF;&#x8005; &amp; &#x89E6;&#x53D1;&#x8005;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨数据源缓存"><span class="toc-text"><a href="#&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;" class="headerlink" title="&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;"></a><a href="#&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;">&#x8DE8;&#x6570;&#x636E;&#x6E90;&#x7F13;&#x5B58;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-text"><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="headerlink" title="&#x6CE8;&#x610F;&#x4E8B;&#x9879;"></a><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#flying-如何判断缓存是否命中"><span class="toc-text"><a href="#flying-&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;" class="headerlink" title="flying &#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;"></a><a href="#flying-&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;">flying &#x5982;&#x4F55;&#x5224;&#x65AD;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x547D;&#x4E2D;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flying-已回滚的操作是否会生成缓存"><span class="toc-text"><a href="#flying-&#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;" class="headerlink" title="flying &#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;"></a><a href="#flying-&#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;">flying &#x5DF2;&#x56DE;&#x6EDA;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x4F1A;&#x751F;&#x6210;&#x7F13;&#x5B58;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附录"><span class="toc-text"><a href="#&#x9644;&#x5F55;" class="headerlink" title="&#x9644;&#x5F55;"></a><a href="#&#x9644;&#x5F55;">&#x9644;&#x5F55;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码示例"><span class="toc-text"><a href="#&#x4EE3;&#x7801;&#x793A;&#x4F8B;" class="headerlink" title="&#x4EE3;&#x7801;&#x793A;&#x4F8B;"></a><a href="#&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#account-表建表语句"><span class="toc-text"><a href="#account-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;" class="headerlink" title="account &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;"></a><a href="#account-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;">account &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#role-表建表语句"><span class="toc-text"><a href="#role-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;" class="headerlink" title="role &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;"></a><a href="#role-&#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;">role &#x8868;&#x5EFA;&#x8868;&#x8BED;&#x53E5;</a></span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -431,7 +431,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
