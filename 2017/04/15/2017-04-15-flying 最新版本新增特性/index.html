@@ -40,7 +40,7 @@
 				<h1 class="site-name"><a href="/" title="my bat is flying in qing-ming">my bat is flying in qing-ming</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -56,7 +56,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:flying-doc.limeng32.com">
 					</form>
 					
@@ -79,14 +79,14 @@
 		<a href="/about" title="limeng32" target="_blank" itemprop="author">limeng32</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> Published 2017-04-15</time>
+    <time datetime="2017-04-14T16:00:00.000Z" itemprop="datePublished"> 发表于 2017-04-15</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#清明"><span class="toc-text"><a href="#&#x6E05;&#x660E;" class="headerlink" title="&#x6E05;&#x660E;"></a><a href="#&#x6E05;&#x660E;">&#x6E05;&#x660E;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#支持更复杂的外键关系"><span class="toc-text"><a href="#&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;" class="headerlink" title="&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;"></a><a href="#&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;">&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改高并发下的bug"><span class="toc-text"><a href="#&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug" class="headerlink" title="&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug"></a><a href="#&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug">&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug</a></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#阳春"><span class="toc-text"><a href="#&#x9633;&#x6625;" class="headerlink" title="&#x9633;&#x6625;"></a><a href="#&#x9633;&#x6625;">&#x9633;&#x6625;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#customTypeHandler"><span class="toc-text"><a href="#customTypeHandler" class="headerlink" title="customTypeHandler"></a><a href="#customTypeHandler">customTypeHandler</a></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初雪"><span class="toc-text"><a href="#&#x521D;&#x96EA;" class="headerlink" title="&#x521D;&#x96EA;"></a><a href="#&#x521D;&#x96EA;">&#x521D;&#x96EA;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol></li></ol>
 		
@@ -174,21 +174,21 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#清明"><span class="toc-text"><a href="#&#x6E05;&#x660E;" class="headerlink" title="&#x6E05;&#x660E;"></a><a href="#&#x6E05;&#x660E;">&#x6E05;&#x660E;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#支持更复杂的外键关系"><span class="toc-text"><a href="#&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;" class="headerlink" title="&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;"></a><a href="#&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;">&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5916;&#x952E;&#x5173;&#x7CFB;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改高并发下的bug"><span class="toc-text"><a href="#&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug" class="headerlink" title="&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug"></a><a href="#&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug">&#x4FEE;&#x6539;&#x9AD8;&#x5E76;&#x53D1;&#x4E0B;&#x7684;bug</a></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#阳春"><span class="toc-text"><a href="#&#x9633;&#x6625;" class="headerlink" title="&#x9633;&#x6625;"></a><a href="#&#x9633;&#x6625;">&#x9633;&#x6625;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#customTypeHandler"><span class="toc-text"><a href="#customTypeHandler" class="headerlink" title="customTypeHandler"></a><a href="#customTypeHandler">customTypeHandler</a></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初雪"><span class="toc-text"><a href="#&#x521D;&#x96EA;" class="headerlink" title="&#x521D;&#x96EA;"></a><a href="#&#x521D;&#x96EA;">&#x521D;&#x96EA;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义主键生成器"><span class="toc-text"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;"></a><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x952E;&#x751F;&#x6210;&#x5668;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用或逻辑查询"><span class="toc-text"><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x4F7F;&#x7528;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通或逻辑查询"><span class="toc-text"><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x666E;&#x901A;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键或逻辑查询"><span class="toc-text"><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;" class="headerlink" title="&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;"></a><a href="#&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;">&#x5916;&#x952E;&#x6216;&#x903B;&#x8F91;&#x67E5;&#x8BE2;</a></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化使用体验"><span class="toc-text"><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;" class="headerlink" title="&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;"></a><a href="#&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;">&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;</a></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全面提升代码质量"><span class="toc-text"><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;" class="headerlink" title="&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;"></a><a href="#&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;">&#x5168;&#x9762;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x8D28;&#x91CF;</a></span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -427,7 +427,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
